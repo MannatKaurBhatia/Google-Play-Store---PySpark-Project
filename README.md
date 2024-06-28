@@ -47,8 +47,8 @@ b. Print the schema of the DataFrame to understand the structure: df.printSchema
 **6. Data Cleaning:**
 
 a. Remove Irrelevant Columns: Drop columns that are not needed:
-b. Handle NaN Values: Remove or impute NaN values:
-c. Data Type Conversion**: Convert columns to appropriate data types. For example, converting a mixed-type "Installs" column to an integer:
+b. Handle NaN Values
+c. Data Type Conversion: Convert columns to appropriate data types. For example, converting a mixed-type "Installs" column to an integer:
 
   from pyspark.sql.functions import regexp_replace, col
   df = df.withColumn("Installs", regexp_replace(col("Installs"), "[^0-9]", "").cast("int"))
